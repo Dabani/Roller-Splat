@@ -4,15 +4,10 @@ using UnityEngine;
 
 public class GroundPiece : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public bool isColored;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public void ChangeColor(Color color) {
+        GetComponent<MeshRenderer>().material.color = color;
+        isColored = true;
     }
 }
